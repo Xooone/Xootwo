@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="InTO定制音乐, into@intomusic.cc">
+		<meta name="description" content="InTO定制音乐，整合了音乐行业优秀创作资源，汇聚了大量优质的词曲创作人，音乐制作人，去帮助每一个用户量身定制属于你的音乐礼物。【我们都是歌手】，是InTO一直秉承的服务理念，通过定制化的词曲，并通过后期编曲对于节奏调性的编排，以及最后录音环节的修音、混音，让一首歌真正的属于你。">
+		<meta name="keywords" content="into,定制音乐,创意礼物,眼童,南京">
+		<title>定制歌曲 - 我们都是歌手</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/lrtk.html" />
+		<link rel="stylesheet" href="css/init.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo32.png">
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/head.js" ></script>
+		<script type="text/javascript" src="js/yinghua.js" ></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		 <!--[if lt IE 9]>
+      <script src="js/respond.src.js"></script>
+           <!--<![endif]-->
+    <script>
+    	var waitForMore = function(e) {
+    		e || e.preventDefault();
+    		alert('内测中，敬请期待！');
+    	}
+    </script>
+        <script type="text/javascript">
+        //if(!(/MicroMessenger/i.test(navigator.userAgent)))
+        //{
+        //    document.body.innerHTML="请在微信打开此链接";
+        //}
+        // 注意：所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+        // 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+        // 完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+        var timestamp, noncestr, signature;
+        
+        $.ajax({
+            url: 'http://wx.tenmaker.com/wechat/server/normal/',
+            async: false,
+            success: function(data) {
+                console.log(data);
+                signature = data.signature;
+                timestamp = data.timestamp;
+                noncestr = data.noncestr;
+            }
+        });
+
+        wx.config({
+            debug: false,
+            appId: 'wxbeac869bcc9744a7',
+            timestamp: timestamp,
+            nonceStr: noncestr,
+            signature: signature,
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+            ]
+        });
+        wx.ready(function(){
+            // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+            wx.onMenuShareTimeline({
+                title: '定制歌曲 - 我们都是歌手',
+                link: 'http://intomusic.cc/wx.html',
+                imgUrl: 'images/wx_6.jpg',
+                trigger: function (res) {
+                    // alert("分享到朋友圈按钮点击");        
+                },
+                success: function (res) {
+                },
+                cancel: function (res) {
+                    // alert('已取消');
+                },
+                fail: function (res) {
+                    alert(JSON.stringify(res));
+                }
+
+            wx.onMenuShareAppMessage({
+                title: '定制歌曲 - 我们都是歌手', // 分享标题
+                desc: '不做标题党，你真的可以是歌手！', // 分享描述
+                link: 'http://intomusic.cc/wx.html', // 分享链接
+                imgUrl: 'http://intomusic.cc/images/wx_6.jpg', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                trigger: function (res) {
+                   // alert('用户点击分享到朋友圈');
+                },
+                success: function (res) {
+                    //alert('已分享');
+                },
+                cancel: function (res) {
+                    //alert('已取消');
+                },
+                fail: function (res) {
+                    //alert('wx.onMenuShareAppMessage:fail: '+JSON.stringify(res));
+                }
+            });
+            });
+        });
+    </script>
+	</head>
+	<body>
+		<div style="display: none;"><img src="images/wx_6.jpg"></div>
+		<div class="head head1 head_b">
+			<div class="container clearfix">
+				<a href="#" class="logo">
+					<img src="images/about_03.png" />
+				</a>
+				<div class="clearfix">
+					<div class="menu_main clearfix">
+
+						<div class="menu">
+
+	    	<nav class="navbar navbar-default equinav" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand">Menu</span>
+				</div>
+				<!-- /.navbar-header -->
+				<div class="collapse navbar-collapse">
+					<div class="sj_menu clearfix">
+						<span class="left">敬请期待……</span>
+						<a href="javascript:;" class="guan right clearfix">
+
+							<span class="left">×</span>
+						</a>
+					</div>
+					<ul class="nav navbar-nav clearfix">
+						<li><a href="#" onclick="waitForMore(this)" class="ahover">
+							音乐故事
+						</a></li>
+						<li><a href="#" onclick="waitForMore(this)">
+							关于眼童
+						</a></li>
+						<li><a href="#" onclick="waitForMore(this)">
+							联系帮助
+						</a></li>
+						<li class="ss_main" style="margin-top: 20px;">
+							<div class="ss clearfix">
+								<button class="left"></button>
+								<input type="text" class="left" />
+							</div>
+						</li>
+
+					</ul>
+					<div class="clearfix anniu_dng">
+						<a href="#" onclick="waitForMore(this)" style="border-right: 1px solid #3c4145;">登录</a>
+						<a href="#" onclick="waitForMore(this)" class="">注册</a>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+	    </div>
+
+					    <div class="clearfix head_lg">
+				    	<a href="#" class="ahover" onclick="waitForMore(this)">注册</a>
+				    	<a href="#" onclick="waitForMore(this)">登录</a>
+				    </div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	    <div class="main clearfix container">
+	    	<div class="daohang">
+	    		<a href="#">InTO定制音乐</a>
+	    	</div>
+	        <div class="clearfix">
+	            	<P class="yinghua_rt_tl">定制歌曲 - 我们都是歌手</P>
+	            	<div class="zuoqu">2016-06-07</div>
+	            	<div class="yinghua_con">
+						
+						<p><img src="images/wx_1.jpeg" style="width:100%;"><br></p><p style="text-align: center;"><span style="font-size: 14px;"><br></span></p>
+
+                        <p style="text-align: center;"><span style="text-decoration: underline;"><strong><span style="text-decoration: underline; font-size: 16px;"> &nbsp; STEP &nbsp;01 &nbsp; &nbsp;</span></strong></span></p><p style="text-align: center;"><strong><span style="font-size: 16px;">作词 &nbsp;作曲</span></strong></p>
+
+                        <p style="text-align: center;"><span style="font-size: 14px;"><br></span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp;&nbsp; &nbsp; &nbsp;InTO音乐人会根据</span><span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>你的故事</strong></span><span style="font-size: 14px;">以及<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>想要的曲风</strong></span>，创作出<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>专属于你的歌词和旋律</strong></span>。你不会作词，没关系，你只需简单直诉出你的故事和小情绪。你不会作曲，没关系，你只需在万千歌曲挑出偏爱的曲风。</span></p>
+
+                        <p><br></p>
+
+                        <p style="text-align: center;"><span style="text-decoration: underline;"><strong><span style="text-decoration: underline; font-size: 16px;"> &nbsp; STEP &nbsp;02 &nbsp; &nbsp;</span></strong></span></p><p style="text-align: center;"><strong><span style="font-size: 16px;">编曲</span></strong></p>
+
+                        <p style="text-align: center;"><span style="font-size: 14px;"><br></span></p>
+
+                        <p style="text-align: left;"><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-size: 14px; line-height: 22.4px;">有了</span><span style="font-size: 14px; line-height: 1.6;">词和曲，接下来该为你做伴奏了！编曲老师会根据你的音域(即你所能唱的最高音和最低音)和你喜欢的乐器，制作出</span><span style="font-size: 14px; line-height: 1.6; color: rgb(2, 30, 170);"><strong>适合于你唱</strong></span><span style="font-size: 14px; line-height: 1.6;">的伴奏。</span></p>
+
+                        <p><br></p>
+
+                        <p style="text-align: center;"><span style="text-decoration: underline;"><strong><span style="text-decoration: underline; font-size: 16px;"> &nbsp; STEP &nbsp;03 &nbsp; &nbsp;</span></strong></span></p><p style="text-align: center;"><strong><span style="font-size: 16px;">录音</span></strong></p>
+
+                        <p style="text-align: center;"><span style="font-size: 14px;"><br></span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp; 一旦进了录音棚，你就是歌手，一切由你主宰</span><span style="font-size: 14px; line-height: 1.6;">，你的话就是最高级别，</span><span style="font-size: 14px; line-height: 1.6; color: rgb(2, 30, 170);"><strong>你就是主角，你就是明星</strong></span><span style="font-size: 14px; line-height: 1.6;">。</span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp; 跟着伴奏和歌词一遍两遍，慢慢进入状态，嗓子也会打开，发声更加轻松，歌曲更加熟悉，（如果背过歌词更容易专注和融入音乐哦），录音师会记录下每一次声音，并择选出好的声音素材。<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>别害怕</strong></span><strong><span style="font-size: 14px; color: rgb(2, 30, 170);">唱错，我们有充裕的时间重新录制和补录。</span></strong></span></p>
+
+                        <p><span style="font-size: 14px;"><br></span></p>
+
+                        <p style="text-align: center;"><span style="text-decoration: underline;"><strong><span style="text-decoration: underline; font-size: 16px;"> &nbsp; STEP &nbsp;04 &nbsp; &nbsp;</span></strong></span></p><p style="text-align: center;"><strong><span style="font-size: 16px;">修音</span></strong></p>
+
+                        <p><span style="font-size: 14px;"><br></span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp; 歌手也会出错，唱歌时总难免出现抢拍子，拖拍子，气息不匀，感情不到位，音准偏差，歌词卡顿，唾液星子喷溅，状态不佳，心情烦躁，喉咙干燥等影响声音发挥的问题。</span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp; &nbsp;根据不同歌者的呈现，最终的录音素材中，就势必要做相应的<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>去除杂音和噪音</strong></span>（如吧嗒嘴，粘舌头，喘气呼声，低频杂波），<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>修正节拍</strong></span>，以及<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>修正音准</strong></span>的工作，尽最大可能呈现出完美的音乐，不然如何满足日渐挑剔的耳朵？</span></p>
+
+                        <p><span style="font-size: 14px;"><br></span></p>
+
+                        <p style="text-align: center;"><span style="text-decoration: underline;"><strong><span style="text-decoration: underline; font-size: 16px;"> &nbsp; STEP &nbsp;05 &nbsp; &nbsp;</span></strong></span></p><p style="text-align: center;"><strong><span style="font-size: 16px;">混音</span></strong></p>
+
+                        <p style="text-align: center;"><span style="font-size: 14px;"><br></span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp;&nbsp; &nbsp; 声音都是由低中高频的配比所组成，如王菲、周杰伦、孙燕姿、bigbang他们专辑里的声音和现场演唱的感觉是不一样的哦，听歌时我们会形容这声音或清澈透亮或浑厚有力或悠扬有深度等等，其实悄咪咪告诉你们混音可是大功臣哦。</span></p>
+
+                        <p><span style="font-size: 14px;"> &nbsp; &nbsp; &nbsp; &nbsp; 混音通常用<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong> EQ均衡，压缩，混响</strong></span>这三大件，还有数不尽的音效处理器在为此献身，最终为了<span style="font-size: 14px; color: rgb(2, 30, 170);"><strong>凸显声音的特质和悦耳度</strong></span>。在多轨道的混音中更强调的是平衡，每个乐器、音色都要体现出它的音乐价值，</span><span style="font-size: 14px; line-height: 1.6;">但最终流行音乐中一切乐器和音效都服务与人声的表达。</span></p>
+
+                        <p><span style="font-size: 14px;"><br></span></p>
+
+                        <p style="text-align: center;"><strong><span style="font-size: 14px; line-height: 1.6; color: rgb(2, 30, 170);"> &nbsp; &nbsp; &nbsp; &nbsp;是谁，在抹平我的思绪！</span></strong></p><p style="text-align: center;"><strong><span style="font-size: 14px; line-height: 1.6; color: rgb(2, 30, 170);"> &nbsp; &nbsp; &nbsp; &nbsp;是谁，在波动我的心弦！</span></strong></p><p style="text-align: center;"><span style="font-size: 14px;"></span> &nbsp; &nbsp; &nbsp; <strong style="line-height: 25.6px; white-space: pre-wrap;"><span style="font-size: 14px; line-height: 1.6; color: rgb(2, 30, 170);">是谁，在玩命抚慰我的耳朵！</span></strong></p>
+
+                        <p><br></p>
+
+                        <p><img src="images/wx_2.jpeg" style="width:100%;"></p>
+
+                        <p><img src="images/wx_3.jpeg" style="width:100%;"></p>
+
+                        <p><a href="http://weidian.com/item.html?itemID=1874376561"><img src="images/wx_4.jpeg" style="width:100%;"></a><br></p>
+
+                        <p><img src="images/wx_5.jpeg" style="width:100%;"></p>
+
+	            	</div>
+	        </div>
+	    </div>
+	    <div class="footer clearfix container">
+	    	    	<div class="footer_lf col-md-6 col-sm-6 col-xs-12">
+	    	    		<a href="http://weibo.com/intomusic0318" class="a2"></a>
+	    	    	</div>
+	    	    	<div class="col-md-6 col-sm-6 col-xs-12 sj_lf footer_rt" style="margin-top: 15px; display: none;">
+	    	    		<a href="http://www.miitbeian.gov.cn/">苏ICP备15024526号©2016音兔</a>
+	    	    	</div>
+	    </div>
+	<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	</body>
+
+</html>
